@@ -1,19 +1,23 @@
 import java.util.ArrayList;
 
 public class Estudiante extends Persona implements MiembroUniversidad{
-    private String  carrera;
+    private String  carrera,legajo;
     private int promedio; 
     private  ArrayList<Materia> Materias; 
-    public Estudiante(String apellido,String nombre,String documento, String carrera, int edad, int promedio){
+    public Estudiante(String apellido,String nombre,String documento, String carrera,String legajo, int edad, int promedio){
         super(nombre, apellido, documento, edad); // Llama al constructor de Persona
         this.carrera=carrera;
         this.promedio=promedio;
+        this.legajo=legajo;
         this.Materias= new ArrayList<>(); // Inicializa el arreglo de materias
     }
 
    
    public String getCarrera() {
     return this.carrera;
+   }
+   public String getLegajo() {
+    return this.legajo;
    }
 
    public void setCarrera(String carrera) {
